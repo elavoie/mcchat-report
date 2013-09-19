@@ -1,6 +1,28 @@
+%!TEX root = ../report.tex
 \chapter{Introduction}
 
-\section{The case for decentralized distributed systems}
+\textit{[Peer-to-peer] is a specific form of relational dynamic, is based on the assumed equipotency of its participants, organized through the free cooperation of equals in view of the performance of a common task, for the creation of a common good, with forms of decision-making and autonomy that are widely distributed throughout the network.} -- Michel Bauwens~\cite{p2pfoundation:definition}
+
+\section{The case for peer-to-peer secure distributed systems}
+
+The recent exposure, by Edward Snowden, of the internet-scale surveillance program performed by the National Security Agency in the United States \cite{} has shown to everybody that anonymity and privacy are inexistent on today's internet. The program was made secretly but sometimes with the complicity of major internet providers and companies, to the detriment of their users.
+
+Notably, last August, Lavabit, an online provider of encrypted email services, decided to terminate its activities to avoid compromising its user data confidentiality \cite{}, soon followed by Silent Circle, a provider of encrypted email, mobile video and voice service provider \cite{}.
+
+On a parallel track, many of the most popular online services, such as Google, Facebook, (Netflix, etc.) have built their business model on profiting from the data user store or generate by interacting with their systems, by selling customized ads or selling the data to third-partys. (Fact-check!) Unfortunately, although no regulation prevents privacy-preserving alternatives from emerging, the enormous profitability of the current business models, combined with the lack of serious large scale funding for developing alternatives, has drawn most of the technical talents to work on improving the existing systems, leaving little viable alternatives for users interested in preserving their privacy.
+
+The need for preserving privacy has been recognized and has lead in the recent years to many projects attempting to develop alternatives to current services. Diaspora, a decentralized privacy-preserving social networking website, has amassed 200,000\$ on the KickStarter crowd funding platform~\footnote{\url{http://www.kickstarter.com/projects/mbs348/diaspora-the-personally-controlled-do-it-all-distr?ref=live}}.
+
+The United Kingdom leading research institutions and companies founded The Horizon Digital Economy Research Institute~\footnote{\url{http://www.horizon.ac.uk/}}, dedicated "to investigate how digital technology may enhance the way we live, work, play and travel in the future". Some of their projects, such as the Internet of Thing, where networking and computing capabilities are aimed at consumer objects and environment, explicitly identify the problematic of defining ownership of data generated with the interaction of the system~\cite{HorizonIoTChallenges:2013}. (TODO: Fix reference).
+
+Autonomous fully peer-to-peer systems combined with full encryption of all communication and data storage have unique capabilities for preserving the security, privacy and freedom of its users, by connecting its users directly to one another and using resources at the edge of the network. They therefore completely forego any critical centralized component, preventing their appropriation by a malicious or exploitative third-party.
+
+Although great advances have been made toward building such systems, none has been widely deployed yet and critical components for building these systems are still at the bleeding edge of both research and industry. 
+
+One small scottish company, MaidSafe, has been working for the last 6 years (?) on solving the core issues preventing these technologies from being used in an industrial setting to build alternatives to the services we use online.  
+
+This report briefly presents the historical developments that have been made on peer-to-peer systems and then use a peer-to-peer internet relay chat application as a case study to evaluate the suitability of MaidSafe libraries for building distributed peer-to-peer online services.
+
 
 \section{Brief history of peer-to-peer systems}
 
@@ -10,9 +32,11 @@
 
 \subsection{Current state}
 
-\section{Case Study: decentralized Internet Relay Chat (IRC) system}
+\section{Case Study: peer-to-peer Internet Relay Chat (IRC) system}
 
 \subsection{Operations}
-Joining the network
-Finding a friend
-Sending messages
+\begin{itemize}
+	\item Joining the network
+	\item Finding a friend
+	\item Sending messages
+\end{itemize}
