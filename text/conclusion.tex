@@ -3,18 +3,27 @@
 
 \textit{Overall, it is fair to say that there is no general agreement about what “is” and what “is not” peer-to-peer.} -- Stephanos Androutsellis and al.~\cite{Androutsellis-Theotokis:2004}.
 
-\section{Limitations of prototype}
-TBD: Explain the tradeoffs that were made to get the implementation working within the time constraints.
+%\section{Limitations of prototype}
+%TBD: Explain the tradeoffs that were made to get the implementation working within the time constraints.
 
-\section{Technical problems encountered}
+%\section{Technical problems encountered}
+%TBD: List of problems encountered and solutions that might be useful for other projects intending to use MaidSafe libraries.
 
-TBD: List of problems encountered and solutions that might be useful for other projects intending to use MaidSafe libraries.
+This report presented the requirements for a peer-to-peer secure instant messaging application built using the MaidSafe libraries, the issues encountered when trying to deploy the MaidSafe Routing network on lab machines at McGill University and the preliminary latency results obtained on pairwise communication between nodes for a 15-nodes network. Although the report falls short of the initial goals of the project of building a prototype instant messaging application, the results presented are nonetheless interesting, since as far as I know, this is the first independent assessment of the MaidSafe libraries.  
+
+The project succeeded in making explicit non-trivial issues that might happen in trying to build a distributed application using the libraries, facilitating the appropriation of the libraries for future application developers and informing the MaidSafe developers of current issues in their libraries. In addition, the preliminary performance evaluation of the system empirically verified that the number of hops is a determinant factor in the latency of message exchanges, which could be expected from the structure of the system and it suggests further investigations to identify the exact factors that contribute to the growth in latency observed.
 
 \section{Suitability of MaidSafe libraries for building peer-to-peer systems}
-TBD: Reflect on the results of the evaluation, the experience of building an application to criticize if the libraries are ready to build real-world applications.
 
-\section{Future work for MaidSafe libraries}
-TBD: Suggest extensions to the current system and implementation to increase reliability and performance.
+Given the number of issues that needed to be addressed and the others remaining, it would be fair to say that the libraries are not mature and stable enough to build end applications on, despite the beta label that was assigned on the MaidSafe website. However, things are moving fast and the quality of support of the development team suggest that it would be worth reinvestigating in a couple of months.  
+
+\section{Future work}
+
+After independently trying to deploy and debug the system, the biggest issue faced was the difficulty in communicating the problems encountered in a way that would allow the development team to reproduce, debug, and fix the issues. The deployment of the system behind an academic institution firewall prevented the possibility of giving access to the deployed system to the developers. 
+
+Also, from communications on the mailing list, so far, they tested their libraries with networks of 1 to 200 nodes, which probably explains why issues of scaling still remain in the code.
+
+I believe that a common, inexpensive and reliable distributed platform would be key to accelerate the development and maturation of the MaidSafe libraries by facilitating replication of results and allowing external contributors to easily test the system, communicate issues, and suggest fixes to the MaidSafe development team. Virtualization technologies provided by VMWare, Oracle, and others with fast support from todays processors make it possible today to create a unique pre-configured linux image that can be run identically and efficiently across a wide variety of client machines. Cloud computing might provide the substrate to build such a platform but back of the envelope calculations show that it is far from inexpensive, being priced at least 15\$/hour for a 1000-nodes network~\footnote{at 0.015\$/hour/machine for the cheapest configuration on the Gandi Virtual Private Hosting platform \url{https://www.gandi.net/hosting/iaas?lang=en}}. There is probably enough privacy-conscious end-users that would be willing to donate free computing time and bandwidth to establish such a low-cost platform to accelerate the development of the next generation of peer-to-peer systems. Contrary to the Planet Lab platform~\footnote{\url{https://www.planet-lab.org/}}, which has multiple applications running on the same nodes managed by academic and commercial organization~\footnote{Private communication with users of the system at McGill pointed out the limited reliability of the nodes}, end-users could choose to support specific projects and run a virtual machine dedicated to a single project they care about and donate the necessary electricity and bandwidth on a desktop machine constantly connected to the internet. The virtual machine would be managed and used remotely by the developers of a project. The platform could be shared between projects to amortize the cost of its development. The development of such a platform is not only possible but probably key to the timely and widespread success of the next generation of secure peer-to-peer applications for end-users.
 
 %\subsection{Security Proofs}
 %\begin{itemize}
